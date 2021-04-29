@@ -84,5 +84,10 @@ let resultadoFinal = Math.floor((trabajoHsPesos + costoCantMaterial + gastoElect
 //Muestra costo en HTML
 $("#nuevaInfo").append(`<div><h2><li style="display: none" id="title">El costo de su impresion sera de ${resultadoFinal} pesos.</li></h2></div>`);
 $("#title").slideDown(1000);
+
+$("#formulario").click(function(){
+    //Actualizamos la página
+    location.reload();
+});
     
 });
