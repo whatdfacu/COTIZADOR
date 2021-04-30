@@ -39,6 +39,7 @@ body main form{
 
 #materialDeSoporte{
     font-size: large;
+    color: black;
 }
 #materialDeSoporte, #materialUtilizado{
     padding-top: 1rem;
