@@ -1,8 +1,6 @@
 $(document).ready(function(){
-    //Actualizamos la página
     $("#boxForm").show(1000);
-/*     location.reload(); */
-});
+
 
 const materiales = [
     {nombre: "PLA", precio:1700, id:1},
@@ -106,16 +104,11 @@ $("#nuevaInfo").append(`<div><h2><li style="display: none" id="title">El costo d
 $("#title").slideDown(1000);
 
 $("#formulario").click(function(){
-    //Actualizamos la página
-    $("#title").slideUp(1000);
-/*     location.reload(); */
+        $("#title").slideUp(1000, function(){
+        //Actualizamos la página
+            location.reload()});
 });
-
-/* $("#formulario").(function(){
-    //Actualizamos la página
-   location.reload();
-}); */
-    
+/*     
 let prueba1 = console.log(`metrosMaterial (${metrosMaterial})`);
 
 let prueba2 = console.log(`horasDeImpresion (${horasDeImpresion})`);
@@ -142,7 +135,7 @@ prueba5
 prueba6
 prueba7
 prueba8
-prueba9
+prueba9 */
 
 });
-
+});

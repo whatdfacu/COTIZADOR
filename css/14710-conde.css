@@ -5,7 +5,7 @@
 
 body {
     width: fit-content;
-    background-color: #0f2a4d;
+    background-color: #0f4d48;
     height: 100%;}
 
 #boxForm{
@@ -13,20 +13,15 @@ body {
 
 }
 .title{
+    font-size: 2,5rem;
     margin-top: 1rem;
     overflow: hidden;
     box-shadow: 0 0 5px rgb(255, 255, 255);
     border-radius: 10px;
-    padding: 1rem;
     background-color: #074d1c;
     text-align: center;
     font-weight: bolder;
     color: #8427CC;}
-h2 {
-    padding: 1rem;
-}
-body main form{
-    color: #4D240F;}
 
 .box {
     margin-top: 1rem;
