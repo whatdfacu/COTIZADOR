@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#boxForm").show(1000);
+    $("#boxForm").slideDown(1000);
 
 
 const materiales = [
@@ -101,7 +101,7 @@ let resultadoFinal = Math.floor((trabajoHsPesos + costoCantMaterial + gastoElect
 
 //Muestra costo en HTML
 $("#nuevaInfo").append(`<div><h2><li style="display: none" id="title">El costo de su impresion sera de ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'ARS' }).format(resultadoFinal)}.</li></h2></div>`);
-$("#title").slideDown(1000);
+$("#title").show(1000);
 
 $("#formulario").click(function(){
         $("#title").slideUp(1000, function(){
