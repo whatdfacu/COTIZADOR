@@ -5,7 +5,7 @@
 
 body {
     width: fit-content;
-    background-color: #819392;
+    background-color: #0f2a4d;
     height: 100%;}
 
 #boxForm{
@@ -15,36 +15,36 @@ body {
 .title{
     margin-top: 1rem;
     overflow: auto;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
     border-radius: 10px;
     padding: 1rem;
-    background-color: #ffffff56;
+    background-color: #074d1c;
     text-align: center;
     font-weight: bolder;
-    color: rgb(49, 61, 55);}
+    color: #8427CC;}
 h2 {
     padding: 1rem;
 }
 body main form{
-    color: rgb(152, 152, 152);}
+    color: #4D240F;}
 
 .box {
     margin-top: 1rem;
     margin-left: 10%;
     margin-right: 10%;
     overflow: auto;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
     border-radius: 10px;
     padding: 1rem;
-    background-color: #b6d8db56;
+    background-color: #404d0f;
     text-align: center;
     font-weight: bolder;
-    color: rgb(49, 61, 55);
+    color: rgb(21, 248, 135);
 }
 
 #materialDeSoporte{
     font-size: large;
-    color: black;
+    color: rgb(97, 97, 97);
 }
 #materialDeSoporte, #materialUtilizado{
     padding-top: 1rem;
