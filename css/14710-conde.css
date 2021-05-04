@@ -14,7 +14,7 @@ body {
 }
 .title{
     margin-top: 1rem;
-    overflow: auto;
+    overflow: hidden;
     box-shadow: 0 0 5px rgb(255, 255, 255);
     border-radius: 10px;
     padding: 1rem;
@@ -32,7 +32,7 @@ body main form{
     margin-top: 1rem;
     margin-left: 10%;
     margin-right: 10%;
-    overflow: auto;
+    overflow:auto;
     box-shadow: 0 0 5px rgb(255, 255, 255);
     border-radius: 10px;
     padding: 1rem;
