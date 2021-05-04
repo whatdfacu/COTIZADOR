@@ -41,13 +41,10 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-img {
-    
+img { 
     padding: 1rem;
     display: flex;
     margin-top: 1rem;
     margin-left: auto;
-    margin-right: auto;
-
-    
+    margin-right: auto;   
 }
