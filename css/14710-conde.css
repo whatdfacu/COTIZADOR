@@ -2,41 +2,37 @@
     text-decoration: none;
     font-family: "Segoe UI", "Roboto", sans-serif !important;
     }
-
 body {
     width: fit-content;
-    background-color: #2be2d3;
+    background-color: #1C5C58;
     height: 100%;}
 
 #boxForm{
     display: none;
-
 }
 .title{
     font-size: 2,5rem;
     margin-top: 1rem;
     overflow: hidden;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
+    box-shadow: 0 0 5px #ffffff;
     border-radius: 10px;
-    background-color: #1ae657;
+    background-color: #44E1D7;
     text-align: center;
     font-weight: bolder;
-    color: #561b83;}
-
+    color: #005C56;}
 .box {
     margin-top: 1rem;
     margin-left: 10%;
     margin-right: 10%;
     overflow:auto;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
+    box-shadow: 0 0 5px #b1b1b1;
     border-radius: 10px;
     padding: 1rem;
-    background-color: #b9e02b;
+    background-color: #00A89D;
     text-align: center;
     font-weight: bolder;
-    color: rgb(21, 248, 135);
+    color: rgb(17, 160, 88);
 }
-
 #materialDeSoporte{
     font-size: large;
     color: rgb(223, 223, 223);
