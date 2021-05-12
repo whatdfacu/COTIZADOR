@@ -10,9 +10,7 @@ $(document).ready(function(){
         {nombre: "NYLON", precio:2000, id:4},
     ]
     //Datos de Dolar
-    const dolar = [
-        {nombre:"precio", valor1:150, valor2:6.25,},
-    ]
+    const dolar = [{nombre:"precio", valor1:150, valor2:6.25,}]
     //Datos para incrementos de costos
     const incrementos = [
         {nombre: "ganancia", percentGanancia: 1.4, gastoElectricoHora:5, cantTrabajo:0.1, metrosPorKg:335,},
@@ -45,44 +43,36 @@ $(document).ready(function(){
 
             //Reasignacion de varaiables a los input del usuario + warnings
             let metrosMaterial = metrosMaterialForm;
+            let horasDeImpresion = horasDeImpresionForm;
+            let materialElegido = materialUtilizadoForm;
             if(metrosMaterial <= 0 || ""){
                 alert("Debe ingresar un número mayor a 0 en el campo de cantidad de metros de material");
-                $("#metrosMaterial").css({"color": "red"});
-            };      
-            let horasDeImpresion = horasDeImpresionForm;
-            if(horasDeImpresion <= 0 || ""){
+            }else if (horasDeImpresion <= 0 || ""){
                 alert("Debe ingresar un número mayor a 0 en el campo de cantidad de horas de impresión")
-                $("#horasDeImpresion").css({"color": "red"});
-            };
-            let materialElegido = materialUtilizadoForm;
-            if(materialElegido != "PLA" & materialElegido != "ABS" & materialElegido != "TPU" & materialElegido != "NYLON"){
+            }else if (materialElegido != "PLA" & materialElegido != "ABS" & materialElegido != "TPU" & materialElegido != "NYLON"){
                 alert("Opción no disponible, por favor elija entre PLA, ABS, TPU o NYLON en el campo de material a utilizar")
-                $("#materialUtilizado").css({"color": "red"});
-            }; 
-
-            //Se selecciona define variable de costo de material elegido segun input de usuario                 
-            let precioMaterial = materiales.find(e => e.nombre ==materialElegido).precio;   
-            //Incremento de costo segun input de usuario
-            let sumaIncrement = incrementosCantTrabajo + 0.5;
-            if(materialDeSoporteForm == true){incrementosCantTrabajo = sumaIncrement};
-
-            //Cuentas preliminares
-            let trabajoHsPesos = (precioDolar * hsDolar)*incrementosCantTrabajo;
-            let costoCantMaterial = (precioMaterial / metrosPorKg) * metrosMaterial;
-            let gastoElectric = gastoElectricoHora*horasDeImpresion;
-
-            //Resultado final
-            let resultadoFinal = Math.floor((trabajoHsPesos + costoCantMaterial + gastoElectric) * percentGanancia);
-        
-            //Muestra costo en HTML con animación
-            $("#nuevaInfo").append(`<div><h2><li style="display: none" id="title">El costo de su impresion sera de ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'ARS' }).format(resultadoFinal)}.</li></h2></div>`);
-            $("#title").show(1000);
-            
-            //Animación final y recarga de sitio para nueva cotización
-            $("#formulario").click(function(){
-                    $("#boxForm").slideUp(1000, function(){
-                    location.reload()
+            }else {
+                    //Se selecciona define variable de costo de material elegido segun input de usuario                 
+                    let precioMaterial = materiales.find(e => e.nombre ==materialElegido).precio;   
+                    //Incremento de costo segun input de usuario
+                    let sumaIncrement = incrementosCantTrabajo + 0.5;
+                    if(materialDeSoporteForm == true){incrementosCantTrabajo = sumaIncrement};
+                    //Cuentas preliminares
+                    let trabajoHsPesos = (precioDolar * hsDolar)*incrementosCantTrabajo;
+                    let costoCantMaterial = (precioMaterial / metrosPorKg) * metrosMaterial;
+                    let gastoElectric = gastoElectricoHora*horasDeImpresion;
+                    //Resultado final
+                    let resultadoFinal = Math.floor((trabajoHsPesos + costoCantMaterial + gastoElectric) * percentGanancia);
+                    //Muestra costo en HTML con animación
+                    $("#nuevaInfo").append(`<div><h2><li id="title" style="display: none">El costo de su impresion sera de ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'ARS' }).format(resultadoFinal)}.</li></h2>`
+                    ,);
+                    $("#title").slideDown(1000)
+                    //Animación final y recarga de sitio para nueva cotización
+                    $("#boton").click(function(){
+                            $("#boxForm").slideUp(1000, function(){
+                                location.reload()
+                                });
                         });
-                });
+                }
         });
     });
