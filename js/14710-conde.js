@@ -64,8 +64,9 @@ $(document).ready(function(){
                     //Resultado final
                     let resultadoFinal = Math.floor((trabajoHsPesos + costoCantMaterial + gastoElectric) * percentGanancia);
                     //Muestra costo en HTML con animación
-                    $("#nuevaInfo").append(`<div id="title"><h2><li>El costo de su impresion sera de ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'ARS' }).format(resultadoFinal)}.</li></h2>`
+                    $("#nuevaInfo").append(`<div><h2><li class="title2" style="display: none">El costo de su impresion sera de ${new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'ARS' }).format(resultadoFinal)}.</li></h2>`
                     ,);
+                    $(".title2").slideDown(1000)
                     //Animación final y recarga de sitio para nueva cotización
                     $("#boton").click(function(){
                             $("#boxForm").slideUp(1000, function(){
